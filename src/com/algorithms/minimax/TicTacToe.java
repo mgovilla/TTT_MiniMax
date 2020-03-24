@@ -19,7 +19,22 @@ public class TicTacToe {
     private ArrayList<Integer> oPos = new ArrayList<>();
 
     // Constructor
-    public TicTacToe() {}
+    public TicTacToe() {
+
+    }
+
+    public TicTacToe(char[] state) {
+        for (int i = 0; i < 9; i++) {
+            board[i] = state[i];
+            if(state[i] == 'x') {
+                xPos.add(i);
+            }
+
+            if(state[i] == 'o') {
+                oPos.add(i);
+            }
+        }
+    }
 
     /**
      * FUNCTION: placePiece is used to put a character in a square on the board
